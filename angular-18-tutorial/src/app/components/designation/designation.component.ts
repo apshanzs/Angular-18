@@ -1,6 +1,7 @@
 import { Component, inject, Inject, OnInit } from '@angular/core';
 import { DesignationService } from '../../services/designation.service';
 import { CommonModule } from '@angular/common';
+import { Designation } from '../../models/designation.model';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './designation.component.css'
 })
 export class DesignationComponent implements OnInit{
-designations:any[]=[];
+designations:Designation[]=[];
 rolesList:any[]=[];
   designationService = inject(DesignationService);
 
