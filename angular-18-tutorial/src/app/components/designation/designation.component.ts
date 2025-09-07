@@ -17,18 +17,21 @@ rolesList:any[]=[];
   designationService = inject(DesignationService);
 
   ngOnInit(): void {
-    this.designationService.getAllDesignation().subscribe((data:any) =>{
-      this.designations= data;
-      console.log(this.designations)
-    })
-this.getRoleList();
  
+this.getRoleList();
+ this.getDesignationList()
   }
 
   getRoleList(){
      this.designationService.getRoles().subscribe((data:any) =>{
       this.rolesList= data.data;
       console.log(this.rolesList)
+    })
+  }
+  getDesignationList(){
+       this.designationService.getAllDesignation().subscribe((data:any) =>{
+      this.designations= data;
+      console.log(this.designations)
     })
   }
 }
