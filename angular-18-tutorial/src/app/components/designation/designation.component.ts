@@ -19,12 +19,13 @@ rolesList:any[]=[];
   ngOnInit(): void {
  
 this.getRoleList();
- this.getDesignationList()
+
   }
 
   getRoleList(){
      this.designationService.getRoles().subscribe((data:any) =>{
       this.rolesList= data.data;
+       this.getDesignationList()
       console.log(this.rolesList)
     })
   }
