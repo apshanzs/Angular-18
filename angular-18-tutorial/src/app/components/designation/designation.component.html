@@ -1,6 +1,19 @@
-<p>designation works!</p>
+<!-- <p>designation works!</p>
 <div>
     <ul *ngFor="let a of rolesList">
         <li>{{a.role}}</li>
     </ul>
-</div>
+</div> -->
+<div>
+    <table>
+        <tr>
+            <th>Sr.No</th>
+            <th>Designation ID</th>
+            <th>Designation Name</th>
+        </tr>
+        <tr *ngFor="let d of designations ; let i = index">
+             <td>{{i}}</td>
+            <td>{{d.designationId}}</td>
+            <td>{{d.designation}}</td>
+        </tr>
+    </table>

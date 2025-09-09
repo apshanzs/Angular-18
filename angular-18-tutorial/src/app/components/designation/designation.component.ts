@@ -31,7 +31,7 @@ this.getRoleList();
   }
   getDesignationList(){
        this.designationService.getAllDesignation().subscribe((data:any) =>{
-      this.designations= data;
+      this.designations= data.data;
       console.log(this.designations)
     })
   }
