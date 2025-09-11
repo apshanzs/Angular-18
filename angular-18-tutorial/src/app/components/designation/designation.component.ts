@@ -30,7 +30,7 @@ this.getRoleList();
     })
   }
   
-  // Fetches the list of designations from the API
+  //Fetches the list of designations from the API
   getDesignationList(){
        this.designationService.getAllDesignation().subscribe((data:any) =>{
       this.designations= data.data;
