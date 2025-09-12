@@ -21,7 +21,7 @@ rolesList:any[]=[];
 this.getRoleList();
 
   }
-// Fetches the list of roles from the API and then fetches designations
+//Fetches the list of roles from the API and then fetches designations
   getRoleList(){
      this.designationService.getRoles().subscribe((data:any) =>{
       this.rolesList= data.data;
